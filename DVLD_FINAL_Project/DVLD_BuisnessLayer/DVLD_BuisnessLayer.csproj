@@ -61,9 +61,9 @@
     <None Include="app.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\..\OneDrive\Desktop\DVLD Project Final\Project\DVLD_DataAccess\DVLD_DataAccessLayer.csproj">
-      <Project>{c1be28ad-d036-4c77-964c-9ee4acc6727a}</Project>
-      <Name>DVLD_DataAccessLayer</Name>
+    <ProjectReference Include="..\DVLD_DataAccessLayerLastVersion\DVLD_DataAccessLayerLastVersion.csproj">
+      <Project>{b4c106f5-9708-4572-b69a-03d4df768458}</Project>
+      <Name>DVLD_DataAccessLayerLastVersion</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

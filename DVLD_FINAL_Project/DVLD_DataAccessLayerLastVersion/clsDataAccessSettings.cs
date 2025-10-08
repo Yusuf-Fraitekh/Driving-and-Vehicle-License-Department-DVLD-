@@ -1,4 +1,4 @@
-﻿namespace DVLD_DataAccessLayer
+﻿namespace DVLD_DataAccessLayerLastVersion
 {
     public static class clsDataAccessSettings
     {

@@ -7,7 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using static System.Net.Mime.MediaTypeNames;
 
-namespace DVLD_DataAccessLayer
+namespace DVLD_DataAccessLayerLastVersion
 {
     public class clsLicenseDataAccess
     {

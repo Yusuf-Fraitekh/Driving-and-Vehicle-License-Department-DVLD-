@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DVLD_FINAL", "DVLD_FINAL.cs
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DVLD_BuisnessLayer", "..\DVLD_BuisnessLayer\DVLD_BuisnessLayer.csproj", "{8BB02588-4FF9-4117-8292-17EDA25EC141}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DVLD_DataAccessLayer", "..\..\..\..\OneDrive\Desktop\DVLD Project Final\Project\DVLD_DataAccess\DVLD_DataAccessLayer.csproj", "{C1BE28AD-D036-4C77-964C-9EE4ACC6727A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DVLD_DataAccessLayerLastVersion", "..\DVLD_DataAccessLayerLastVersion\DVLD_DataAccessLayerLastVersion.csproj", "{B4C106F5-9708-4572-B69A-03D4DF768458}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,10 +23,10 @@ Global
 		{8BB02588-4FF9-4117-8292-17EDA25EC141}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8BB02588-4FF9-4117-8292-17EDA25EC141}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8BB02588-4FF9-4117-8292-17EDA25EC141}.Release|Any CPU.Build.0 = Release|Any CPU
-		{C1BE28AD-D036-4C77-964C-9EE4ACC6727A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{C1BE28AD-D036-4C77-964C-9EE4ACC6727A}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{C1BE28AD-D036-4C77-964C-9EE4ACC6727A}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{C1BE28AD-D036-4C77-964C-9EE4ACC6727A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B4C106F5-9708-4572-B69A-03D4DF768458}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B4C106F5-9708-4572-B69A-03D4DF768458}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B4C106F5-9708-4572-B69A-03D4DF768458}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B4C106F5-9708-4572-B69A-03D4DF768458}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

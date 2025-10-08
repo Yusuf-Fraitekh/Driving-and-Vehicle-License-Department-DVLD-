@@ -8,7 +8,7 @@ using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DVLD_DataAccessLayer
+namespace DVLD_DataAccessLayerLastVersion
 {
     public class clsDetainedLicenseDataAccess
     {
