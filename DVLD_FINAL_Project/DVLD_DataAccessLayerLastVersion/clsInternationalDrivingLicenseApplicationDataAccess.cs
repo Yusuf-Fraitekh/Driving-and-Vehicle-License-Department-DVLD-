@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data.SqlClient;
 
-namespace DVLD_DataAccessLayer
+namespace DVLD_DataAccessLayerLastVersion
 {
     public class clsInternationalDrivingLicenseApplicationDataAccess
     {

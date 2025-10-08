@@ -6,15 +6,15 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data.SqlClient;
 
-namespace DVLD_DataAccessLayer
+namespace DVLD_DataAccessLayerLastVersion
 {
-    public class clsTestTypeDataAccess
+    public class clsLicenseClassDataAccess
     {
-        public static DataTable GetAllTestTypes()
+        public static DataTable GetAllLicenseClasses()
         {
             DataTable table = new DataTable();
             SqlConnection connection = new SqlConnection(clsDataAccessSettings.ConnectionString);
-            string query = @"SELECT * FROM TestTypes";
+            string query = @"SELECT * FROM LicenseClasses";
             SqlCommand command = new SqlCommand(query, connection);
             try
             {
@@ -37,14 +37,14 @@ namespace DVLD_DataAccessLayer
             return table;
 
         }
-        public static bool GetTestTypeByTestTypeID(int TestTypeID, ref string TestTypeTitle, ref string TestTypeDescription,ref decimal TestTypeFees)
+        public static bool GetLicenseClassByClassID(short LicenseClassID, ref string ClassName, ref string ClassDescription, ref short MinimumAllowedAge, ref short DefaultValidityLength, ref decimal ClassFees)
         {
             bool isFound = false;
             SqlConnection connection = new SqlConnection(clsDataAccessSettings.ConnectionString);
-            string query = @"SELECT * FROM TestTypes
-                             WHERE TestTypeID=@TestTypeID;";
+            string query = @"SELECT * FROM LicenseClasses
+                             WHERE LicenseClassID=@LicenseClassID;";
             SqlCommand command = new SqlCommand(query, connection);
-            command.Parameters.AddWithValue("@TestTypeID", TestTypeID);
+            command.Parameters.AddWithValue("@LicenseClassID", LicenseClassID);
             try
             {
                 connection.Open();
@@ -52,9 +52,11 @@ namespace DVLD_DataAccessLayer
                 if (reader.Read())
                 {
                     isFound = true;
-                    TestTypeTitle = Convert.ToString(reader["TestTypeTitle"]);
-                    TestTypeDescription=Convert.ToString(reader["TestTypeDescription"]);
-                    TestTypeFees = Convert.ToDecimal(reader["TestTypeFees"]);
+                    ClassName = Convert.ToString(reader["ClassName"]);
+                    ClassDescription = Convert.ToString(reader["ClassDescription"]);
+                    ClassFees = Convert.ToDecimal(reader["ClassFees"]);
+                    MinimumAllowedAge = Convert.ToInt16(reader["MinimumAllowedAge"]);
+                    DefaultValidityLength = Convert.ToInt16(reader["DefaultValidityLength"]);
                 }
                 else
                 {
@@ -72,24 +74,26 @@ namespace DVLD_DataAccessLayer
             }
             return isFound;
         }
-        public static bool GetTestTypeByTestTypeTitle(ref int TestTypeID, string TestTypeTitle, ref string TestTypeDescription, ref decimal TestTypeFees)
+        public static bool GetLicenseClassByClassName(ref short LicenseClassID, string ClassName, ref string ClassDescription, ref short MinimumAllowedAge, ref short DefaultValidityLength, ref decimal ClassFees)
         {
             bool isFound = false;
             SqlConnection connection = new SqlConnection(clsDataAccessSettings.ConnectionString);
-            string query = @"SELECT * FROM TestTypes
-                             WHERE TestTypeTitle=@TestTypeTitle;";
+            string query = @"SELECT * FROM LicenseClasses
+                             WHERE ClassName=@ClassName;";
             SqlCommand command = new SqlCommand(query, connection);
-            command.Parameters.AddWithValue("@TestTypeTitle", TestTypeTitle);
+            command.Parameters.AddWithValue("@ClassName", ClassName);
             try
             {
                 connection.Open();
                 SqlDataReader reader = command.ExecuteReader();
-                if (reader.HasRows)
+                if (reader.Read())
                 {
                     isFound = true;
-                    TestTypeID = Convert.ToInt32(reader["TestTypeID"]);
-                    TestTypeDescription = Convert.ToString(reader["TestTypeDescription"]);
-                    TestTypeFees = Convert.ToDecimal(reader["TestTypeFees"]);
+                    LicenseClassID = Convert.ToInt16(reader["LicenseClassID"]);
+                    ClassDescription = Convert.ToString(reader["ClassDescription"]);
+                    ClassFees = Convert.ToDecimal(reader["ClassFees"]);
+                    MinimumAllowedAge = Convert.ToInt16(reader["MinimumAllowedAge"]);
+                    DefaultValidityLength = Convert.ToInt16(reader["DefaultValidityLength"]);
                 }
                 else
                 {
@@ -107,20 +111,25 @@ namespace DVLD_DataAccessLayer
             }
             return isFound;
         }
-        public static bool UpdateTest( int TestTypeID, string TestTypeTitle,  string TestTypeDescription,  decimal TestTypeFees)
+        public static bool UpdateLicenseClass(short LicenseClassID, string ClassName, string ClassDescription, short MinimumAllowedAge, short DefaultValidityLength, decimal ClassFees)
         {
             int rowsAffected = -1;
             SqlConnection connection = new SqlConnection(clsDataAccessSettings.ConnectionString);
-            string query = @"Update TestTypes 
-                            Set TestTypeFees=@TestTypeFees,
-                                TestTypeTitle=@TestTypeTitle,
-                                TestTypeDescription=@TestTypeDescription
-                             WHERE TestTypeID=@TestTypeID;";
+            string query = @"Update LicenseClasses 
+                            Set LicenseClassID=@LicenseClassID,
+                                ClassName=@ClassName,
+                                ClassDescription=@ClassDescription,
+                                MinimumAllowedAge=@MinimumAllowedAge,
+                                DefaultValidityLength=@DefaultValidityLength,
+                                ClassFees=@ClassFees
+                             WHERE LicenseClassID=@LicenseClassID;";
             SqlCommand command = new SqlCommand(query, connection);
-            command.Parameters.AddWithValue("@TestTypeID", TestTypeID);
-            command.Parameters.AddWithValue("@TestTypeFees", TestTypeFees);
-            command.Parameters.AddWithValue("@TestTypeTitle", TestTypeTitle);
-            command.Parameters.AddWithValue("@TestTypeDescription", TestTypeDescription);
+            command.Parameters.AddWithValue("@LicenseClassID", LicenseClassID);
+            command.Parameters.AddWithValue("@ClassName", ClassName);
+            command.Parameters.AddWithValue("@ClassDescription", ClassDescription);
+            command.Parameters.AddWithValue("@MinimumAllowedAge", MinimumAllowedAge);
+            command.Parameters.AddWithValue("@DefaultValidityLength", DefaultValidityLength);
+            command.Parameters.AddWithValue("@ClassFees", ClassFees);
             try
             {
                 connection.Open();
