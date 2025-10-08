@@ -1,5 +1,6 @@
 ﻿using DVLD.Applications;
 using DVLD.DriverLicense;
+using DVLD.Licenses.International_License;
 using DVLD.User;
 using DVLD_BuisnessLayer;
 using System;
@@ -274,6 +275,14 @@ namespace DVLD.Tests
                 return;
             }    
                 frmListLocalDrivingLicesnseApplications_Load(null, null);
+        }
+
+        private void showPersonLicenseHistoryToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            int LocalDrivingLicenseApplicationID = (int)dgvLocalDrivingLicenseApplications.CurrentRow.Cells[0].Value;
+            clsLocalDrivingLicenseApplication localDrivingLicenseApplication = clsLocalDrivingLicenseApplication._GetLocalDrivingLicenseApplicatioInfoByID(LocalDrivingLicenseApplicationID);
+            frmShowPersonLicenseHistory frm = new frmShowPersonLicenseHistory(localDrivingLicenseApplication.ApplicantPersonID);
+            frm.ShowDialog();
         }
     }
 }
