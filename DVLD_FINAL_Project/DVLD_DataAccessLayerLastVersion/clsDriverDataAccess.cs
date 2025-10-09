@@ -13,12 +13,12 @@ namespace DVLD_DataAccessLayerLastVersion
         {
             int DriverID = -1;
             SqlConnection connection = new SqlConnection(clsDataAccessSettings.ConnectionString);
-            string query = @"INSERT INTO Drivers (PersonID,UserID,CreatedDate)
-                             VALUES (@PersonID, @UserID,@CreatedDate);
+            string query = @"INSERT INTO Drivers (PersonID,CreatedByUserID,CreatedDate)
+                             VALUES (@PersonID, @CreatedByUserID,@CreatedDate);
                              SELECT SCOPE_IDENTITY();";
             SqlCommand command = new SqlCommand(query, connection);
             command.Parameters.AddWithValue("@PersonID", PersonID);
-            command.Parameters.AddWithValue("@UserID", UserID);
+            command.Parameters.AddWithValue("@CreatedByUserID", UserID);
             command.Parameters.AddWithValue("@CreatedDate", DateTime.Now);
             
             try

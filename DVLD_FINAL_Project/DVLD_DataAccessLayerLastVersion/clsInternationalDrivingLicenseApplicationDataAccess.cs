@@ -227,7 +227,7 @@ namespace DVLD_DataAccessLayerLastVersion
             int InterNationalDrivingLicenseApplicationID = -1;
             SqlConnection connection = new SqlConnection(clsDataAccessSettings.ConnectionString);
             string query = @"SELECT InternationalLicenseID FROM InternationalLicenses
-                           Where DriverID=8 AND GETDATE() between IssueDate and ExpirationDate;";
+                           Where DriverID=@DriverID AND GETDATE() between IssueDate and ExpirationDate;";
             SqlCommand command = new SqlCommand(query, connection);
             command.Parameters.AddWithValue("DriverID", @DriverID);
             try
