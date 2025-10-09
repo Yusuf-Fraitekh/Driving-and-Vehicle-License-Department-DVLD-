@@ -1,5 +1,6 @@
 ﻿
 using DVLD.DriverLicense;
+using DVLD.Licenses.International_License;
 using DVLD.Licenses.International_Licenses;
 using DVLD_BuisnessLayer;
 using DVLD_FINAL.Settings;
@@ -117,6 +118,13 @@ namespace DVLD.Applications.International_License
            frmShowInternationalLicenseInfo frm = new frmShowInternationalLicenseInfo(InternationalLicenseID);
            frm.ShowDialog();
             frmNewInternationalLicenseApplication_Load(null, null);
+        }
+
+        private void llShowLicenseHistory_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            int PersonID = License.DriverInfo.PersonID;
+            frmShowPersonLicenseHistory frm = new frmShowPersonLicenseHistory(PersonID);
+            frm.ShowDialog();
         }
     }
 }
