@@ -1,12 +1,53 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\Public\\Desktop\\Driving-and-Vehicle-License-Department-DVLD-\\DVLD_FINAL_Project\\DVLD_FINAL\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{09221C5E-BBED-48AF-B5EC-016ACB84EC81}|DVLD_FINAL.csproj|c:\\users\\public\\desktop\\driving-and-vehicle-license-department-dvld-\\dvld_final_project\\dvld_final\\applications\\international driving license\\frmnewinternationallicenseapplication.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{09221C5E-BBED-48AF-B5EC-016ACB84EC81}|DVLD_FINAL.csproj|solutionrelative:applications\\international driving license\\frmnewinternationallicenseapplication.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{09221C5E-BBED-48AF-B5EC-016ACB84EC81}|DVLD_FINAL.csproj|c:\\users\\public\\desktop\\driving-and-vehicle-license-department-dvld-\\dvld_final_project\\dvld_final\\applications\\international driving license\\frmnewinternationallicenseapplication.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{09221C5E-BBED-48AF-B5EC-016ACB84EC81}|DVLD_FINAL.csproj|solutionrelative:applications\\international driving license\\frmnewinternationallicenseapplication.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": []
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "frmNewInternationalLicenseApplication.cs",
+              "DocumentMoniker": "C:\\Users\\Public\\Desktop\\Driving-and-Vehicle-License-Department-DVLD-\\DVLD_FINAL_Project\\DVLD_FINAL\\Applications\\International Driving License\\frmNewInternationalLicenseApplication.cs",
+              "RelativeDocumentMoniker": "Applications\\International Driving License\\frmNewInternationalLicenseApplication.cs",
+              "ToolTip": "C:\\Users\\Public\\Desktop\\Driving-and-Vehicle-License-Department-DVLD-\\DVLD_FINAL_Project\\DVLD_FINAL\\Applications\\International Driving License\\frmNewInternationalLicenseApplication.cs",
+              "RelativeToolTip": "Applications\\International Driving License\\frmNewInternationalLicenseApplication.cs",
+              "ViewState": "AgIAAGAAAAAAAAAAAAAUwH0AAABYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-09T16:19:10.743Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "frmNewInternationalLicenseApplication.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Public\\Desktop\\Driving-and-Vehicle-License-Department-DVLD-\\DVLD_FINAL_Project\\DVLD_FINAL\\Applications\\International Driving License\\frmNewInternationalLicenseApplication.cs",
+              "RelativeDocumentMoniker": "Applications\\International Driving License\\frmNewInternationalLicenseApplication.cs",
+              "ToolTip": "C:\\Users\\Public\\Desktop\\Driving-and-Vehicle-License-Department-DVLD-\\DVLD_FINAL_Project\\DVLD_FINAL\\Applications\\International Driving License\\frmNewInternationalLicenseApplication.cs [Design]",
+              "RelativeToolTip": "Applications\\International Driving License\\frmNewInternationalLicenseApplication.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-09T16:19:08.683Z",
+              "EditorCaption": " [Design]"
+            }
+          ]
+        }
+      ]
     }
   ]
 }
